@@ -20,7 +20,7 @@ class BookscraperPipeline:
         
         lowercase_keys = ['category', 'product_type']
         for lowercase_key in lowercase_keys:
-            value = adapter.get(lowercase_keys)
+            value = adapter.get(lowercase_key)
             adapter[lowercase_key] = value.lower()
         
         price_keys = ['price', 'price_excl_tax', 'price_incl_tax', 'tax']
